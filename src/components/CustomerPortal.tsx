@@ -13,7 +13,7 @@ interface Customer {
 const CustomerList = ({ customers, onSelect, selectedCustomerId }: { customers: Customer[]; onSelect: (customer: Customer) => void, selectedCustomerId: number | null }) => {
   return (
     <div className="col-md-4">
-      <h2>CustomersSH</h2>
+      <h2>Customers With Employee</h2>
       <ul className="list-group">
         {customers.map((customer) => (
           <li
@@ -24,7 +24,7 @@ const CustomerList = ({ customers, onSelect, selectedCustomerId }: { customers: 
           >
             <div className="card">
               <div className="card-body">
-                <h5 className="card-title">{customer.name}</h5>
+                <h5 className="card-title">Yes This Customer {customer.name}</h5>
                 <p className="card-text">{customer.title}</p>
               </div>
             </div>
@@ -89,7 +89,7 @@ const CustomerPortal: React.FC = () => {
 
   useEffect(() => {
     // Fetch customers data from API or mock data
-    const customersData = Array.from({ length: 1000 }, (_, index) => ({
+    const customersData = Array.from({ length: 10 }, (_, index) => ({
       id: index + 1,
       name: `Customer ${index + 1}`,
       title: `Title ${index + 1}`,
