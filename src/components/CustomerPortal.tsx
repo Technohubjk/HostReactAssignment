@@ -13,7 +13,7 @@ interface Customer {
 const CustomerList = ({ customers, onSelect, selectedCustomerId }: { customers: Customer[]; onSelect: (customer: Customer) => void, selectedCustomerId: number | null }) => {
   return (
     <div className="col-md-4">
-      <h2>Customers</h2>
+      <h2>CustomersSH</h2>
       <ul className="list-group">
         {customers.map((customer) => (
           <li
@@ -52,7 +52,7 @@ const CustomerDetails = ({ customer }: { customer: Customer }) => {
 
     const interval = setInterval(() => {
       fetchPhotos();
-    }, 10000); // Update photos every 10 seconds
+    }, 10); // Update photos every 10 seconds
 
     fetchPhotos(); // Initial fetch
 
